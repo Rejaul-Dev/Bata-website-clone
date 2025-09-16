@@ -1,0 +1,268 @@
+/* !===== variable =====  */
+
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --border-clr: #c9c6c6;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --box-show-clr: rgba(0, 0, 0, 0.2);
+  --w-txt-clr: #0f0f0f;
+  --footer-bg-clr: #141414;
+}
+
+@media screen and (max-width: 480px) {
+  /* ===== header ===== */
+
+  .header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-container .location_or_customarcare {
+    display: none;
+  }
+
+  .header-container .search_box {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+  }
+  .header-container .search_box .search_flid {
+    display: none;
+  }
+  .header-container .search_box .src_icon {
+    /* border: 1px solid #ddd;
+  border-left: none; */
+    border-radius: 5px;
+    padding: 2px 5px;
+  }
+  .review_or_scl_or_cart_i {
+    display: none;
+  }
+
+  .header-container .toggleb-btn .bar {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  /* ====== navber ===== */
+
+  .nav {
+    width: 70%;
+    height: 100%;
+    background: var(--light);
+    box-shadow: 0px 1px 2px var(--box-show-clr);
+    backdrop-filter: blur(15px);
+    padding: 0px;
+    position: absolute;
+    top: 0;
+    display: none;
+  }
+
+  .nav .main_menu {
+    width: 100%;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav .main_menu li {
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--gray);
+  }
+  .nav .main_menu li a {
+    font-size: 1.5em;
+  }
+
+  /* !====== Drop downmenu ===== */
+
+  .bnd_submenu {
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    position: absolute;
+    top: -100px;
+    left: 0px;
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-1000px); /* নিচ থেকে উঠবে */
+
+    transition: all 0.3s ease;
+    z-index: 9999999;
+  }
+  .nav .main_menu li:hover .bnd_submenu {
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .arrow {
+    display: inline-block;
+  }
+
+  /* !======= Slider section ======= */
+
+  .silde-container {
+    max-height: 243px;
+  }
+  .slider {
+    height: 183px;
+    margin: 0;
+  }
+
+  /* !<!-- ?====== Shoes Card ===== --> */
+
+  .shoes-car_box-content {
+    flex-wrap: wrap;
+    margin: 10px 0;
+    gap: 3px;
+  }
+  .shoes-car_box-content .card {
+    padding: 5px 7.5px;
+    flex-basis: 40%;
+  }
+
+  .shoes-car_box-content .card img {
+    width: 125px;
+    min-height: 112px;
+  }
+
+  .shoes-car_box-content .card .number span {
+    font-size: 0.6em;
+  }
+
+  .shoes-car_box-content .card .brand_name h4 {
+    font-size: 0.6em;
+    margin: 2.5px 0;
+  }
+  .shoes-car_box-content .card .product_title a {
+    font-size: 0.5em;
+    margin-bottom: 2.5px;
+  }
+  .shoes-car_box-content .card .product_price .old_price {
+    font-size: 0.501em;
+  }
+  .shoes-car_box-content .card .product_price .sale_price {
+    font-size: 0.501em;
+  }
+
+  .shoes-car_box-content .card .btn_box .shop_btn {
+    font-size: 0.505em;
+    padding: 5px 32.5px;
+    margin: 5px 0;
+  }
+  .shoes-car_box-content .card .circale {
+    width: 15px;
+    height: 15px;
+  }
+  /*! <!-- ?====JUST LANDED ===== --> */
+  .just {
+    margin: 0 15px;
+  }
+  .heading-title h1 {
+    font-size: 1em;
+  }
+
+  /* !====== Footer Area Start Now ===== */
+
+  /* !====== top footer  ===== */
+
+  .top-footer-content {
+    margin-top: 25px;
+    padding: 12px 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .top-footer-content .footer_item .f_title h5 {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .top-footer-content .footer_item .f_title .footer_menu ul {
+    list-style: none;
+  }
+  .top-footer-content .footer_item .f_title .footer_menu ul li {
+  }
+  .top-footer-content .footer_item .f_title .footer_menu ul li a {
+    color: var(--white);
+    font-size: 0.9em;
+    text-transform: capitalize;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+  }
+  .top-footer-content .footer_item .f_title .footer_menu ul li a::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: var(--white);
+    transform: scaleX(0);
+    transform-origin: left;
+    will-change: transform;
+    transition: all 0.3s ease;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+  }
+  .top-footer-content .footer_item .f_title .footer_menu ul li a:hover::after {
+    transform: scaleX(1);
+  }
+
+  .f-border {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 0.3px;
+    background: var(--border-clr);
+    opacity: 0.3;
+    margin-top: 30px;
+  }
+
+  /* !====== bottom footer  ===== */
+  .bottom-footer-content {
+    padding: 10px 20px;
+    line-height: 2;
+    color: var(--white);
+  }
+
+  .bottom-footer-content .b-footer-item .sign_up_or_scl_icon .sing_up a {
+    font-size: 0.8em;
+  }
+
+  .bottom-footer-content .b-footer-item .sign_up_or_scl_icon .social_icon i {
+    font-size: 1em;
+    padding: 0 10px;
+  }
+  .bottom-footer-content .b-footer-item .copyright_box p {
+    font-size: 0.7em;
+    margin: 15px 0;
+  }
+  .bottom-footer-content .b-footer-item .payment_method img {
+    width: 40px;
+    height: 25px;
+    padding: 0 5px;
+    margin-bottom: 50px;
+  }
+}
